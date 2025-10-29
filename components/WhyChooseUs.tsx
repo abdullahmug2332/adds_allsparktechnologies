@@ -6,8 +6,8 @@ export default function WhyChooseUsSection() {
     <>
    
       <div className="container  pad">
-        <p className="heading  text-center w-[80%] xl:w-[60%] mx-auto color font-[700]">Why Choose Allspark Technologies?</p>
-        <p className="para text-center w-[80%] xl:w-[60%] mx-auto">Trusted by businesses worldwide, we blend creativity and technology to craft digital experiences that drive growth, performance, and success.</p>
+        <p className="heading  sm:text-center sm:w-[80%] xl:w-[60%] mx-auto color font-[700]">Why Choose Allspark Technologies?</p>
+        <p className="para sm:text-center sm:w-[80%] xl:w-[60%] mx-auto">Trusted by businesses worldwide, we blend creativity and technology to craft digital experiences that drive growth, performance, and success.</p>
         <div className="flex flex-col lg:grid grid-cols-1 lg:grid-cols-3 gap-[20px] mt-[30px]">
           <div className=" flex flex-col gap-[20px]">
             <div className=" h-[50%] bg-[#F3F4F6] rounded-[20px] p-[20px] flex flex-col justify-between shadow-md cursor-pointer hover:-translate-y-1 duration-300 border min-h-[200px]">

@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function SalesEngineSection() {
   return (
     <section className="w-full bg-[#1B36B7] my-16 relative">
-      <div className=" p-4">
+      <div className=" md:p-4">
         <div className="grid min-h-[50vh] overflow-hidden rounded-xl container md:grid-cols-2">
           {/* Left: Text */}
-          <div className="p-12 sm:p-8 md:p-10 h-full flex flex-col justify-center">
+          <div className="py-12 px-4 sm:p-8 md:p-10 md:pl-0 xl:pl-10 h-full flex flex-col justify-center">
             <h2 className="text-2xl font-bold leading-tight text-white heading ">
               How We Turned a Website
               Into a Sales Engine

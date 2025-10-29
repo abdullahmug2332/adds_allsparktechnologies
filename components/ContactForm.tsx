@@ -27,14 +27,14 @@ export default function ContactForm() {
   return (
     <div className="container flex flex-wrap bg2 min-h-[680px] mar pt-[20px]">
       {/* Left Side */}
-      <div className="w-full lg:w-1/2 relative hidden lg:block px-[40px] pt-[40px]">
-        <div className="mb-2 flex items-center space-x-2 para font-semibold color mt-[40px] lg:mt-0 justify-center sm:justify-start text-center sm:text-start">
+      <div className="w-full lg:w-1/2 relative px-[30px] sm:px-[40px] pt-[40px]">
+        <div className="mb-2 flex items-center space-x-2 para font-semibold color mt-[40px] lg:mt-0 justify-start text-start">
           <Image src="/arw.png" alt="arrow" width={200} height={200} className="w-7" />
           <span className="font text-white">Let’s Get Started</span>
           <Image src="/alw.png" alt="arrow" width={200} height={200} className="w-7" />
         </div>
 
-        <h2 className="heading font-bold text-white text-center sm:text-start leading-[45px]">
+        <h2 className="heading font-bold text-white text-start leading-[45px]">
           Your Website, Your Growth — Let’s Build It Together
         </h2>
         <p className="text-white text-[19px] mt-[10px] w-[95%]">
@@ -50,19 +50,19 @@ export default function ContactForm() {
           alt="img"
           width={400}
           height={400}
-          className="absolute bottom-0 !w-[80%] left-[50px] z-[3]"
+          className="absolute bottom-0 !w-[80%] left-[50px] z-[3]  hidden lg:block"
         />
       </div>
 
       {/* Right Side (Form) */}
-      <div className="w-full lg:w-1/2 text-white">
-        <div className="w-[90%] mx-auto lg:mx-0 flex flex-col items-center sm:items-start">
-          <p className="text-[27px] lg:text-[33px] 2xl:text-[34px] font-[700] my-[10px] text-center sm:text-start font">
+      <div className="w-full lg:w-1/2 text-white mt-[60px] lg:mt-0">
+        <div className="w-[90%] mx-auto lg:mx-0 flex flex-col items-start">
+          <p className="text-[27px] lg:text-[33px] 2xl:text-[34px] font-[700] my-[10px] text-start font">
             Got an Idea in Mind? Let’s Make It Live.
           </p>
 
           <form className="w-full" onSubmit={handleSubmit}>
-            <div className="w-full flex flex-col items-center sm:items-start xl:gap-[10px] mb-[20px]">
+            <div className="w-full flex flex-col items-start xl:gap-[10px] mb-[20px]">
               {/* Name + Email */}
               <div className="flex gap-[7px] xl:gap-[15px] mt-[20px] w-full">
                 <div className="w-full lg:w-1/2">

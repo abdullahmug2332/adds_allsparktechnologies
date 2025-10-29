@@ -10,6 +10,7 @@ import MythVsReality from "@/components/MythVsReality";
 import ContactForm from "@/components/ContactForm";
 import FaqSection from "@/components/FaqSection";
 import ThisIsYou2 from "@/components/ThisISYou2";
+import Footer from "@/components/Footer";
 
 interface HeroData {
   btnText: string;
@@ -25,10 +26,10 @@ const serviceHero: HeroData = {
   btnText: "Get a Quote",
   btnText2: "Get a Quote",
   btnText3: "Get a Quote",
-  title: "Digital Marketing Services",
-  description: "Digital Marketing Services",
-  formSubtitle: "Digital Marketing Services",
-  formTitle: "Digital Marketing Services",
+  title: "Website Development Services",
+  description: "Website Development Services",
+  formSubtitle: "Talk To Us",
+  formTitle: "Website Development Services",
 }
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
       <MythVsReality />
       <ContactForm />
       <FaqSection />
+      <Footer/>
     </>
   );
 }

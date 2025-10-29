@@ -53,7 +53,7 @@ export default function Navbar2() {
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/logo.svg"
                 alt="All Spark Logo"
                 width={150}
                 height={150}

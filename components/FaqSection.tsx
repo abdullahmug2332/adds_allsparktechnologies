@@ -116,14 +116,14 @@ const itemVariants: Variants = {
           viewport={{ once: true }}
         >
           {/* FAQ Label */}
-          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color mt-[40px] lg:mt-0 justify-center sm:justify-start text-center sm:text-start">
+          <div className="mb-2 flex items-center space-x-4 para font-semibold uppercase tracking-wide color mt-[40px] lg:mt-0 justify-start text-center sm:text-start">
             <Image src='/al.png' alt="arrow" width={200} height={200} className=" w-7" />
             <span className="font">{faq.title}</span>
             <Image src='/ar.png' alt="arrow" width={200} height={200} className="w-7" />
           </div>
 
           {/* Main Heading */}
-          <h2 className="heading font-bold !leading-relaxed text-gray-900 text-center sm:text-start">
+          <h2 className="heading font-bold !leading-relaxed text-gray-900 text-start">
             {faq.subtitle}
           </h2>
 

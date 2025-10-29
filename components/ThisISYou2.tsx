@@ -85,7 +85,7 @@ export default function ThisIsYou2() {
     return (
 
         <div className="container pad">
-            <div className="mb-8 md:mb-12 text-center">
+            <div className="mb-8 md:mb-12 sm:text-center">
                 <h1 className="heading md:text-4xl font-bold color mb-2">This is You, Isnt It?</h1>
                 <p className="para md:text-lg text-slate-600">Your journey to a better website starts here — where design meets performance, and every click turns visitors into loyal customers.</p>
             </div>

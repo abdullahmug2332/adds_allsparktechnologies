@@ -45,7 +45,7 @@ const services = [
 export default function CoreWebServices() {
   return (
     <section className= "py-16 bg-white">
-      <div className="container  text-center">
+      <div className="container  sm:text-center">
         <h2 className="heading font-bold color">
           Core Web Development Services
         </h2>
@@ -71,9 +71,7 @@ export default function CoreWebServices() {
                   {service.description}
                 </p>
               </div>
-              <button className="mt-6 w-fit px-4 py-2 para font-medium color border border-indigo-200 rounded-lg hover:bg-indigo-50 transition">
-                Read more →
-              </button>
+              
             </div>
           ))}
         </div>

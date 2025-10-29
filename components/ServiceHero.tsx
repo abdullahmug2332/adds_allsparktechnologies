@@ -81,7 +81,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
             <Image src={img2} className='absolute bottom-0 right-0 z-[0]' alt="heroimg" />
             <div className="container flex flex-wrap lg:items-center justify-center  pad" >
                 <motion.div
-                    className="w-full lg:w-1/2 flex flex-col items-center sm:items-start text-center sm:text-start"
+                    className="w-full lg:w-1/2 flex flex-col items-start text-start"
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}>
@@ -93,16 +93,16 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                    
                 </motion.div>
                 <motion.div
-                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-center sm:items-start z-[20] mt-[40px] lg:mt-[0]"
+                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-start z-[20] mt-[40px] lg:mt-[0]"
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}>
                     <div className='flex items-center gap-[5px] mt-[10px] '>
                         <Image src={arrowleft} className='w-[35px]' alt='icon'></Image>
-                        <p className='text-[15px] font-[500] text-center sm:text-start font'>{serviceHero.formSubtitle}</p>
+                        <p className='para font-[500] text-start '>{serviceHero.formSubtitle}</p>
                         <Image src={arrowright} className='w-[35px]' alt='icon'></Image>
                     </div>
-                    <p className='heading font-[700] my-[10px] text-center sm:text-start w-full'>{serviceHero.formTitle}</p>
+                    <p className='heading font-[700] my-[10px] text-start w-full'>{serviceHero.formTitle}</p>
                     <form onSubmit={handleSubmit} className='w-full'>
                         <div className='w-full flex flex-col items-center sm:items-start gap-[10px] relative z-[20]'>
                             <div className='flex gap-[15px] mt-[20px] w-full relative z-[20]'>

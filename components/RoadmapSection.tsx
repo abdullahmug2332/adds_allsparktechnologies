@@ -5,19 +5,19 @@ export default function RoadmapSection() {
 
 
   return (
-    <section className="w-full min-h-[75vh] bg-white">
-      <div className=" h-full">
+    <section className="w-full  bg-white">
+      <div className=" h-full ">
         <div className="grid h-full overflow-hidden  bg-gray-100 md:grid-cols-2">
           {/* Left: Form */}
-          <div className="bg-[#181965] ">
-            <div className="max-w-[95%] mx-auto lg:max-w-[70%]   h-full p-6 sm:p-8 md:p-10 my-5">
+          <div className="bg-[#181965] min-h-[70vh]  ">
+            <div className="max-w-[95%] mx-auto lg:max-w-[70%]   h-full p-6 sm:p-8 md:p-10 my-5  flex flex-col justify-center">
               <h2 className="heading font-bold leading-tight text-white sm:text-[36px]  xl:max-w-[75%]">
                 Free Website Launch or Relaunch Roadmap
               </h2>
               <p className="mt-2 para text-white/80 xl:max-w-[70%]">
                 Not sure how to get started? Let us map it out for you. In 20 minutes, we’ll show you
               </p>
-              <form className="mt-6">
+              <form className="mt-7">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {/* First Name */}
                   <div>
@@ -81,7 +81,7 @@ export default function RoadmapSection() {
 
                 <button
                   type="submit"
-                  className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#FF8C3A] px-5 py-3  para font-semibold text-white shadow-sm transition hover:bg-[#ff7a18] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF8C3A] focus:ring-offset-[#14215E] sm:w-auto"
+                  className="mt-10 inline-flex w-full items-center justify-center rounded-full bg-[#FF8C3A] px-5 py-3  para font-semibold text-white shadow-sm transition hover:bg-[#ff7a18] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF8C3A] focus:ring-offset-[#14215E] sm:w-auto"
                 >
                   Get Free Relaunch Roadmap →
                 </button>
@@ -90,7 +90,7 @@ export default function RoadmapSection() {
           </div>
 
           {/* Right: Image */}
-          <div className="relative min-h-[75vh] w-full md:h-auto">
+          <div className="relative min-h-[70vh]  w-full  hidden md:block md:h-auto">
             <Image
               src="/images/a.png" // replace with your image: e.g., /magnifier-keyboard.jpg
               alt="Keyboard with magnifying glass"
