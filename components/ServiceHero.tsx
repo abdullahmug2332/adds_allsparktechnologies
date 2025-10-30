@@ -76,7 +76,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
     };
 
     return (
-        <div className='newservice bg text-white min-h-[680px] relative !w-[100vw] overflow-x-hidden'>
+        <div className='newservice bg text-white min-h-[680px] relative !w-[100vw] overflow-x-hidden' id='hero'>
             <Image src={img1} className='absolute top-0 lg:bottom-0 left-0' alt="heroimg" />
             <Image src={img2} className='absolute bottom-0 right-0 z-[0]' alt="heroimg" />
             <div className="container flex flex-wrap lg:items-center justify-center  pad" >

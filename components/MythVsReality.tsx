@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MythVsReality() {
   return (
-    <div className="container ">
+    <div className="container pad">
     <p className="color heading text-center font-[800]">Myth vs Reality</p>
     <p className="text-[20px] text-center font-[400]">Discover AllSpark Technologies, a leading website development agency in USA.</p>
     <div className="bg w-[87%]  p-[20px] mt-[40px]  6 relative hidden lg:flex">

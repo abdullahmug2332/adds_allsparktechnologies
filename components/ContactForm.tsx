@@ -25,7 +25,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="container flex flex-wrap bg2 min-h-[680px] mar pt-[20px]">
+    <div className="container flex flex-wrap bg2 min-h-[680px] mar pt-[20px] " id="contact">
       {/* Left Side */}
       <div className="w-full lg:w-1/2 relative px-[30px] sm:px-[40px] pt-[40px]">
         <div className="mb-2 flex items-center space-x-2 para font-semibold color mt-[40px] lg:mt-0 justify-start text-start">

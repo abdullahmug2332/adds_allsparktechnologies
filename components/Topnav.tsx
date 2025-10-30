@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 export default function Topnav() {
   return (
     <div className="bg-gray-900 text-white ">
-      <div className='max-w-7xl mx-auto flex justify-between items-center px-4  py-2'>
+      <div className='container flex justify-between items-center px-4  py-2'>
 
         <div className="hidden md:flex  items-center space-x-2">
           <span className='text-[12px]'>info@allsparktechnologies.com</span>

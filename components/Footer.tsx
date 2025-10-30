@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-[#18185E] text-gray-300 py-24 ">
-        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="container grid grid-cols-1  lg:grid-cols-3   gap-10">
           {/* Company Info */}
           <div className="space-y-4">
             <Image
@@ -67,10 +67,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-4 text-sm">
               {[
-                { name: "About", href: "/about" },
-                { name: "FAQ'S", href: "/#faqs" },
-                { name: "Contact", href: "/contact" },
-                { name: "Blogs", href: "/blogs" },
+                { name: "Home", href: "/#hero" },
+                { name: "Services", href: "/#services" },
+                { name: "Why Choose Us", href: "/#why-choose-us" },
+                { name: "Relaunch Roadmap", href: "/#relaunch-roadmap" },
+                { name: "Faqs", href: "/#faqs" },
+                { name: "Contact", href: "/#contact" },
               ].map((linkItem, index) => (
                 <li key={index} className="flex items-center space-x-2">
                   <ChevronsRight className="h-4 w-4 text-white" />
@@ -82,33 +84,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Our Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Our Services</h3>
-            <ul className="space-y-4 text-sm">
-              {[
-                { service: "Custom Software Development", icon: "/images/development-01.svg", query: "custom-software-development" },
-                { service: "Website Development", icon: "/images/web-app-development-01.svg", query: "website-development" },
-                { service: "Mobile App Development", icon: "/images/web-app-development-01.svg", query: "mobile-app-development" },
-                { service: "AI & Machine Learning", icon: "/images/ai-machine-learning-01.svg", query: "ai-and-machine-learning" },
-                { service: "Digital Marketing", icon: "/images/digital-marketing-seo-01.svg", query: "digital-marketing" },
-              ].map((serviceItem, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <ChevronsRight className="h-4 w-4 text-white" />
-                  <Link
-                    href={{
-                      pathname: `/${serviceItem.query}`,
-                    }}
-                    className="flex items-center hover:text-white transition duration-300"
-                  >
-
-                    {serviceItem.service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-          </div>
+        
 
           {/* Contact Us */}
           <div className=" text-end">
@@ -139,7 +115,7 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="bg py-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-white text-sm">
+        <div className="container flex flex-col md:flex-row justify-between items-center text-white text-sm">
           <p>
             © {new Date().getFullYear()} All Rights Reserved by AllSpark Technologies
           </p>
