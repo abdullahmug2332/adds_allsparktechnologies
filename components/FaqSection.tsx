@@ -21,7 +21,7 @@ export default function FaqSection() {
     "img3": "faq3.png",
 
     "subtitle": "Frequently Asked Questions",
-    "title": "FAQ",
+    "title": "FAQs",
     "faqs": [
       {
         "question": "What services does your software house offer?",
