@@ -135,6 +135,7 @@ export default function RoadmapSection() {
               priority
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"
+              unoptimized
             />
           </div>
         </div>
