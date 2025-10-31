@@ -93,6 +93,7 @@ const itemVariants: Variants = {
               className="!w-full "
               width={200}
               height={200}
+              unoptimized   
             />
           </div>
 
@@ -104,6 +105,7 @@ const itemVariants: Variants = {
             style={{ animationDuration: "4s" }}
             width={200}
             height={200}
+            unoptimized
           />
         </motion.div>
 
