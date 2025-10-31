@@ -62,6 +62,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     },
 
                 });
+                alert("Message sent!")
                 setName("")
                 setEmail("")
                 setPhone("")
@@ -89,7 +90,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                         <button className=' flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  hover:scale-[1.02] duration-500'>No Website = No Trust. Let’s Fix That.</button>
                     </Link>
                     <p className='text-[30px] lg:text-[40px] 2xl:text-[50px] font-[700] mt-[20px] w-full md:w-[70%] lg:w-full leading-14 font'>Still Running Your Business without a Proper Website?</p>
-                    <p className='w-full md:w-[80%] lg:w-full mt-[10px] text-[18px] '>Without a proper website, you’re invisible to 70% of buyers who search online before making a decision. We build professional websites that put your business on the map — and in front of paying customers.</p>
+                    <p className='w-full md:w-[80%] lg:w-full mt-[10px] text-[18px] hidden sm:block '>Without a proper website, you’re invisible to 70% of buyers who search online before making a decision. We build professional websites that put your business on the map — and in front of paying customers.</p>
                    
                 </motion.div>
                 <motion.div

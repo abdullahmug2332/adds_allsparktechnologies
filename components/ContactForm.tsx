@@ -11,9 +11,10 @@ export default function ContactForm() {
   const [industry, setIndustry] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({
+
+    const formData = {
       name,
       email,
       phone,
@@ -21,8 +22,35 @@ export default function ContactForm() {
       project,
       industry,
       message,
-    });
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        alert("✅ Message sent successfully!");
+        // Clear form
+        setName("");
+        setEmail("");
+        setPhone("");
+        setBudget("");
+        setProject("");
+        setIndustry("");
+        setMessage("");
+      } else {
+        alert("❌ Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Something went wrong. Please try again later.");
+    }
   };
+
 
   return (
     <div className="container flex flex-wrap bg2 min-h-[680px] mar pt-[20px] " id="contact">
