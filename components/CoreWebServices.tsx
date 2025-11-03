@@ -44,7 +44,7 @@ const services = [
 
 export default function CoreWebServices() {
   return (
-    <section className= "py-16 bg-white" id='services'>
+    <section className= "pad bg-white" id='services'>
       <div className="container  sm:text-center">
         <h2 className="heading font-bold color">
           Core Web Development Services

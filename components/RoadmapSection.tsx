@@ -35,10 +35,10 @@ export default function RoadmapSection() {
   return (
     <section className="w-full bg-white" id="relaunch-roadmap">
       <div className="h-full">
-        <div className="grid h-full overflow-hidden bg-gray-100 md:grid-cols-2">
+        <div className="grid  bg-gray-100 md:grid-cols-2">
           {/* Left: Form */}
-          <div className="bg-[#181965] min-h-[70vh]">
-            <div className="max-w-[95%] mx-auto lg:max-w-[70%] h-full p-6 sm:p-8 md:p-10 my-5 flex flex-col justify-center">
+          <div className="bg-[#181965] ">
+            <div className="max-w-[95%] mx-auto lg:max-w-[70%] h-full p-6 sm:p-8 md:p-10 my-5 flex flex-col sm:justify-center">
               <h2 className="heading font-bold leading-tight text-white sm:text-[36px] xl:max-w-[75%]">
                 Free Website Launch or Relaunch Roadmap
               </h2>

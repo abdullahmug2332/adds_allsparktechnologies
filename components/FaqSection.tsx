@@ -63,7 +63,7 @@ const itemVariants: Variants = {
 
   return (
     <section className="pad w-[100vw] overflow-x-hidden" id="faqs">
-      <div className="container pt-[3%] flex flex-col lg:flex-row items-center lg:justify-between gap-10 ">
+      <div className="container pt-[3%] flex flex-col lg:flex-row items-center lg:justify-between gap-5 lg:gap-10 ">
         {/* ───────── LEFT IMAGE SECTION ───────── */}
         <motion.div
           className="relative w-[90%] lg:w-[43%] mr-auto     "

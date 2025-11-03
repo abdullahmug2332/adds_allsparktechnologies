@@ -315,7 +315,7 @@ ol {
 }
 
 .pad {
-  @apply py-[50px] lg:py-[80px];
+  @apply py-[30px] sm:py-[50px] lg:py-[80px];
 }
 .mar {
   @apply my-[50px] lg:my-[80px];
@@ -344,4 +344,28 @@ input,
 textarea,
 select {
   @apply focus:outline-0;
+}
+
+/* Basic infinite spin */
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+
+
+/* Keyframes */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Accessibility: stop animation if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .spin-slow,
+  .spin-fast,
+  .spin-reverse {
+    animation: none !important;
+    transform: none !important;
+  }
 }
