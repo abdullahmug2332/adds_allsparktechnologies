@@ -1,123 +1,201 @@
 "use client"
 
-import { VerticalTimeline } from "@/components/Vertical-timeline"
-import { Check } from "lucide-react"
+import { useState } from "react"
+import {
+  Globe,
+  Monitor,
+  Trophy,
+  Target,
+  Eye,
+  AlertCircle,
+  BookOpen,
+  Lightbulb,
+  Palette,
+  HelpCircle,
+  Zap,
+  Share2,
+} from "lucide-react"
 
-const timelineSteps = [
+const scenarios = {
+  current: [
     {
-        id: 1,
-        title: "You have a domain, but not a live website.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 1,
+      icon: Globe,
+      title: "You have a domain, but not a live website.",
     },
     {
-        id: 2,
-        title: "Your present website looks like it was made in the 90s.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 2,
+      icon: Monitor,
+      title: "Your present website looks like it was made in the 90s.",
     },
     {
-        id: 3,
-        title: "You want a portfolio site that actually converts.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 3,
+      icon: Trophy,
+      title: "Your website is a digital showpiece, it does not bring in any leads, sales or even visits.",
     },
     {
-        id: 4,
-        title: "Your website is a digital showpiece, it doesn't bring in any leads, sales or even visits.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 4,
+      icon: Eye,
+      title: "You are losing eyeballs.",
     },
     {
-        id: 5,
-        title: "You tried WordPress, got lost, and never looked back.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 5,
+      icon: BookOpen,
+      title: "You tried WordPress, got lost, and never looked back.",
     },
     {
-        id: 6,
-        title: "You're losing eyeballs.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 6,
+      icon: Zap,
+      title: "You have got a killer product, but your website makes it look average.",
     },
     {
-        id: 7,
-        title: "You've got a killer product, but your website makes it look average.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 7,
+      icon: HelpCircle,
+      title: "You know you need a website, but do not know where to start.",
     },
     {
-        id: 8,
-        title: "You know you need a website, but don't know where to start.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 8,
+      icon: Palette,
+      title: "You want to stand out on the web, not copy paste another template.",
     },
     {
-        id: 9,
-        title: "You want to stand out on the web, not copy paste another template.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 9,
+      icon: Lightbulb,
+      title: "You have watched a hundred Framer tutorials and still feel stuck.",
     },
     {
-        id: 10,
-        title: "You've watched a hundred Framer tutorials and still feel stuck.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 10,
+      icon: AlertCircle,
+      title: "There is something missing&quot; on your website, you just do not know what.",
     },
     {
-        id: 11,
-        title: "There's \"something missing\" on your website, you just don't know what.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 11,
+      icon: Share2,
+      title: "You are embarrassed to send your link because it feels half-finished.",
+    },
+  ],
+  desired: [
+    {
+      id: 1,
+      icon: Target,
+      title: "You want a portfolio site that actually converts.",
     },
     {
-        id: 12,
-        title: "You're embarrassed to send your link because it feels half-finished.",
-        icon: <Check className="h-5 w-5" />,
-        status: "completed" as const,
+      id: 2,
+      icon: Zap,
+      title: "Your website is a modern, professional masterpiece.",
     },
-]
-
-const leftSteps = timelineSteps.slice(0, 6)
-const rightSteps = timelineSteps.slice(6, 12)
-
-export default function ThisIsYou2() {
-    return (
-
-        <div className="container pad">
-            <div className="mb-8 md:mb-12 sm:text-center">
-                <h1 className="heading md:text-4xl font-bold color mb-2">This is You, Isnt It?</h1>
-                <p className="para md:text-lg text-slate-600">Your journey to a better website starts here — where design meets performance, and every click turns visitors into loyal customers.</p>
-            </div>
-            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 ">
-                {/* Left Timeline */}
-                <div>
-                    <VerticalTimeline
-                        steps={leftSteps}
-                        lineColor="bg"
-                        dotColor="bg"
-                        completedColor="bg"
-                    />
-                </div>
-
-                {/* Right Timeline */}
-                <div >
-                    <VerticalTimeline
-                        steps={rightSteps}
-                        lineColor="bg"
-                        dotColor="bg"
-                        completedColor="bg"
-                    />
-                </div>
-            </div>
-            <div className="block md:hidden">
-                <VerticalTimeline
-                    steps={timelineSteps}
-                    lineColor="bg"
-                    dotColor="bg"
-                    completedColor="bg"
-                />
-            </div>
-        </div>
-    )
+    {
+      id: 3,
+      icon: Lightbulb,
+      title: "Your website consistently generates leads, sales, and engagement.",
+    },
+    {
+      id: 4,
+      icon: Eye,
+      title: "You are attracting the right audience and gaining visibility.",
+    },
+    {
+      id: 5,
+      icon: Palette,
+      title: "Your site is beautifully designed and easy to manage.",
+    },
+    {
+      id: 6,
+      icon: Trophy,
+      title: "Your product shines through a stunning web presence.",
+    },
+    {
+      id: 7,
+      icon: Lightbulb,
+      title: "You have a clear roadmap and professional guidance.",
+    },
+    {
+      id: 8,
+      icon: Share2,
+      title: "You stand out with a unique, custom-built website.",
+    },
+    {
+      id: 9,
+      icon: Zap,
+      title: "You Are creating something amazing, not just learning.",
+    },
+    {
+      id: 10,
+      icon: Monitor,
+      title: "Your website is complete, polished, and professional.",
+    },
+    {
+      id: 11,
+      icon: Globe,
+      title: "You proudly share your link because it represents your brand.",
+    },
+  ],
 }
+
+export default function ThisIsYou() {
+  const [activeTab, setActiveTab] = useState<"current" | "desired">("current")
+
+  const items = scenarios[activeTab]
+
+  return (
+    <div className="pad">
+      <div className="container">
+        {/* Header */}
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="heading font-[700] color mb-4">This is You, Is not It?</h1>
+          <p className="text-slate-600 para max-w-2xl mx-auto">
+            Your journey to a better website starts here — where design meets performance, and every click turns
+            visitors into loyal customers.
+          </p>
+        </div>  
+
+        {/* Tab Navigation */}
+        <div className="flex gap-4 justify-center mb-8 md:mb-12 ">
+          <button
+            onClick={() => setActiveTab("current")}
+            className={`px-4 md:px-6 py-2 rounded-full font-semibold para transition-all duration-300 border-2 ${
+              activeTab === "current"
+                ? "bg text-white bcolor"
+                : "bg-white text-slate-400 border-slate-300 hover:border-slate-400"
+            }`}
+          >
+            YOUR CURRENT STATE
+          </button>
+          <button
+            onClick={() => setActiveTab("desired")}
+            className={`px-6 md:px-8 py-2 rounded-full para md:text-base transition-all duration-300 border-2 ${
+              activeTab === "desired"
+                ? "bg text-white bcolor"
+                : "bg-white text-slate-400 border-slate-300 hover:border-slate-400"
+            }`}
+          >
+            DESIRED OUTCOME
+          </button>
+        </div>
+
+        {/* Grid of Scenarios */}
+        <div className="bg-[#F3F4F6] border rounded-3xl p-6 md:p-8 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {items.map((item) => {
+              const IconComponent = item.icon
+              return (
+                <div key={item.id} className="flex items-center gap-4 pb-6 md:pb-8 border-b border-slate-200 last:border-b-0">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100">
+                      <IconComponent className="w-9 h-9 color" />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-slate-700 para">{item.title}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
