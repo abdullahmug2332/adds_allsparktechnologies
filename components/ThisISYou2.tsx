@@ -143,10 +143,10 @@ export default function ThisIsYou() {
         </div>  
 
         {/* Tab Navigation */}
-        <div className="flex  justify-center mb-8 md:mb-12 ">
+        <div className="flex  justify-center mb-8 md:mb-12  ">
           <button
             onClick={() => setActiveTab("current")}
-            className={`px-4 md:px-6 py-2 rounded-l-[5px] font-semibold para transition-all duration-300 border-2 ${
+            className={`px-4 md:px-6 py-2 rounded-l-[5px] font-semibold text-[10px] sm:text-[16px] transition-all duration-300 border-2 cursor-pointer ${
               activeTab === "current"
                 ? "bg text-white bcolor"
                 : "bg-white text-slate-400 border-slate-300 hover:border-slate-400"
@@ -156,7 +156,7 @@ export default function ThisIsYou() {
           </button>
           <button
             onClick={() => setActiveTab("desired")}
-            className={`px-6 md:px-8 py-2 rounded-r-[5px] para md:text-base transition-all duration-300 border-2 ${
+            className={`px-6 md:px-8 py-2 rounded-r-[5px] text-[10px] sm:text-[16px] transition-all duration-300 border-2 cursor-pointer ${
               activeTab === "desired"
                 ? "bg text-white bcolor"
                 : "bg-white text-slate-400 border-slate-300 hover:border-slate-400"

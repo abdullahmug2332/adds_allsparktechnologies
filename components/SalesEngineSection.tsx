@@ -1,5 +1,6 @@
 // components/SalesEngineSection.tsx
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SalesEngineSection() {
   return (
@@ -15,11 +16,11 @@ export default function SalesEngineSection() {
             <p className="mt-2 para text-white/80">
               See how our website design and development services helped a business grow from invisible online to generating consistent leads. Your business could be next.
             </p>
-            <button
+            <Link href={"/#contact"}
               className="mt-6 inline-flex w-48 items-center justify-center rounded-full bg-[#FF8C3A] px-5 py-3 para font-semibold text-white shadow-sm transition hover:bg-[#ff7a18] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF8C3A] "
             >
-              Learn More →  
-            </button>
+              Get in Touch →  
+            </Link>
           </div>
 
           {/* Right: Image */}

@@ -176,7 +176,7 @@ export default function Navbar2() {
               <div className="mt-5 mx-auto text-center">
                 <Link href="/">
                   <Image
-                    src="/images/logo.svg"
+                    src="/logo.svg"
                     alt="All Spark Logo"
                     width={150}
                     height={150}

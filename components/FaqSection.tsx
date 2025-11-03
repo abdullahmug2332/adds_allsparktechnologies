@@ -62,7 +62,7 @@ const itemVariants: Variants = {
 
 
   return (
-    <section className="pad" id="faqs">
+    <section className="pad w-[100vw] overflow-x-hidden" id="faqs">
       <div className="container pt-[3%] flex flex-col lg:flex-row items-center lg:justify-between gap-10 ">
         {/* ───────── LEFT IMAGE SECTION ───────── */}
         <motion.div

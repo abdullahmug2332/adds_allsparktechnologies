@@ -87,14 +87,14 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, ease: "easeOut" }}>
                     <Link href='/contact'>
-                        <button className=' flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  hover:scale-[1.02] duration-500'>No Website = No Trust. Let’s Fix That.</button>
+                        <button className=' flex items-center gap-[5px] border py-[10px] px-[20px] rounded-[27px] font-[500] mt-[50px] lg:mt-0  hover:scale-[1.02] duration-500 hidden sm:block'>No Website = No Trust. Let’s Fix That.</button>
                     </Link>
                     <p className='text-[30px] lg:text-[40px] 2xl:text-[50px] font-[700] mt-[20px] w-full md:w-[70%] lg:w-full leading-14 font'>Still Running Your Business without a Proper Website?</p>
                     <p className='w-full md:w-[80%] lg:w-full mt-[10px] text-[18px] hidden sm:block '>Without a proper website, you’re invisible to 70% of buyers who search online before making a decision. We build professional websites that put your business on the map — and in front of paying customers.</p>
                    
                 </motion.div>
                 <motion.div
-                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-start z-[20] mt-[40px] lg:mt-[0]"
+                    className="w-full lg:w-1/2 lg:pl-[80px] flex flex-col items-start z-[20] mt-[20px] lg:mt-[0]"
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}>
@@ -106,7 +106,7 @@ export default function ServiceHero({ serviceHero }: ServiceHeroProps) {
                     <p className='heading font-[700] my-[10px] text-start w-full'>{serviceHero.formTitle}</p>
                     <form onSubmit={handleSubmit} className='w-full'>
                         <div className='w-full flex flex-col items-center sm:items-start gap-[10px] relative z-[20]'>
-                            <div className='flex gap-[15px] mt-[20px] w-full relative z-[20]'>
+                            <div className='flex gap-[15px] mt-[0px] w-full relative z-[20]'>
                                 <div className='w-full lg:w-1/2'>
                                     <label htmlFor="name" className='!text-start'>Name*</label>
                                     <input type="text" placeholder='Enter Name' value={name} onChange={(e) => setName(e.target.value)} required className='mt-[10px]  text-white w-full border bg-transparent py-[10px] px-[8px]  ' />
