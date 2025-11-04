@@ -18,7 +18,7 @@ export default function MythVsReality() {
           <Image src={"/circle.png"} alt="circle" unoptimized className="w-[80%] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-spin [animation-duration:7s]" width={200} height={200} />
           <Image src="/reality.png" alt="myth" width={200} height={200} className="w-full" />
         </span>
-        <p className="text-white text-[20px] xl:text-[25px] 2xl:text-[35px] w-[80%]  mr-auto">You just need a smart partner like All Spark Tech who knows what actually converts.</p>
+        <p className="text-white text-[20px] xl:text-[25px] 2xl:text-[35px] w-[80%]  mr-auto">You just need a smart partner like AllSpark Technologies who knows what actually converts.</p>
       </div>
       <div className="flex flex-col items-center lg:hidden bg  mt-[50px] sm:mt-[95px]">
         <span className="w-[20%] translate-y-[-50%] absolute">

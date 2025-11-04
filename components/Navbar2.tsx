@@ -98,7 +98,7 @@ export default function Navbar2() {
                 href="/#faqs"
                 className="text-gray-700 px-4 py-2 transition duration-500 rounded-full font-semibold hover:bg-[#384BFF] hover:text-white"
               >
-                Faqs
+                FAQs
               </Link>
             </li>
           </ul>
