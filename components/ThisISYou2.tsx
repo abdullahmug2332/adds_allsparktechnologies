@@ -66,7 +66,7 @@ const scenarios = {
     {
       id: 10,
       icon: AlertCircle,
-      title: "There is something missing&quot; on your website, you just do not know what.",
+      title: "There is something missing on your website, you just do not know what.",
     },
    
   ],
@@ -114,7 +114,7 @@ const scenarios = {
     {
       id: 9,
       icon: Zap,
-      title: "You Are creating something amazing, not just learning.",
+      title: "You are creating something amazing, not just learning.",
     },
     {
       id: 10,
