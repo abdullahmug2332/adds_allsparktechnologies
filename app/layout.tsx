@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import GlobalPreloader from "@/components/GlobalPreloader";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         {children}
         <ScrollToTopButton/>
         </div>
+        <GlobalPreloader />
       </body>
     </html>
   );

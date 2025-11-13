@@ -203,14 +203,14 @@ export default function ProjectPage() {
           <div className="flex flex-wrap  mt-[20px] items-center gap-[10px] ">
             <Dialog>
               <DialogTrigger asChild  onClick={()=>setDevice("laptop")}>
-                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer hover:scale-[1.03] duration-300">
                   {projectData.responsiveness.laptop == true ? <RxLaptop className={iconclass} /> : <TbDeviceLaptopOff className={iconclass} />}
                   <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.laptop == true ? "Laptop Responsive" : "Not Laptop Responsive"}</p>
                 </div>
               </DialogTrigger>
 
               <DialogTrigger asChild  onClick={()=>setDevice("tablet")}>
-                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer hover:scale-[1.03] duration-300">
                   {projectData.responsiveness.tablet == true ? <SlScreenTablet className={iconclass} /> : <TbDeviceTabletOff className={iconclass} />}
                   <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.tablet == true ? "Tablet Responsive" : "Not Tablet Responsive"}</p>
 
@@ -218,7 +218,7 @@ export default function ProjectPage() {
               </DialogTrigger>
 
               <DialogTrigger asChild  onClick={()=>setDevice("mobile")}>
-                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer hover:scale-[1.03] duration-300">
                   {projectData.responsiveness.mobile == true ? <TbDeviceMobile className={iconclass} /> : <TbDeviceMobileOff className={iconclass} />}
                   <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.mobile == true ? "Mobile Responsive" : "Not Mobile Responsive"}</p>
                 </div>
