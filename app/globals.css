@@ -320,15 +320,50 @@ ol {
 .mar {
   @apply my-[50px] lg:my-[80px];
 }
-.bg {
-  @apply bg-[#384bff];
+:root {
+  --background: #ffffff;
+  --foreground: #222121;
+  --primary: #384bff;
+  --marquee: #777777;
+  --accordion:#f5f5f5;
+  --contact:#ebebeb;
+  --border:#dbdbdb;
+
 }
+.bg {
+  @apply bg-[var(--primary)]
+}
+
+.color {
+  @apply !text-[var(--primary)]
+}
+
+.hbg {
+  @apply hover:bg-[var(--primary)]
+}
+
+.hcolor {
+  @apply hover:text-[var(--primary)]
+}
+
+.bcolor {
+  @apply border-[var(--primary)]
+}
+.bgacc{
+  background-color: var(--accordion);
+}
+.bgcon{
+  background-color: var(--contact);
+}
+.border{
+  border-color: var(--border);
+}
+
+
 .bg2 {
   @apply bg-[#181965];
 }
-.color {
-  @apply text-[#384bff];
-}
+
 .bcolor {
   @apply border-[#384bff];
 }
@@ -368,4 +403,7 @@ select {
     animation: none !important;
     transform: none !important;
   }
+}
+.pcontainer {
+  @apply w-[95%] md:w-[80%] xl:w-[60%] mx-auto
 }

@@ -11,6 +11,7 @@ import ContactForm from "@/components/ContactForm";
 import FaqSection from "@/components/FaqSection";
 import ThisIsYou2 from "@/components/ThisISYou2";
 import Footer from "@/components/Footer";
+import Portfolio from "@/components/Portfolio";
 
 interface HeroData {
   btnText: string;
@@ -38,6 +39,7 @@ export default function Home() {
       <Topnav />
       <Navbar2 />
       <ServiceHero serviceHero={serviceHero} />
+      <Portfolio/>
       <ThisIsYou2 />
       <CoreWebServices />
       <WhyChooseUsSection />
