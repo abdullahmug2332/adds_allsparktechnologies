@@ -1,5 +1,5 @@
-"use client"; 47
-import React from "react";
+"use client"; 
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
 import { allProjects } from "@/lib/Projects";
 import Image from "next/image";
@@ -17,11 +17,16 @@ import Autoplay from "embla-carousel-autoplay";
 import { GiStarShuriken } from "react-icons/gi";
 import Navbar2 from "@/components/Navbar2";
 import Footer from "@/components/Footer";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function ProjectPage() {
   const params = useParams();
   const { project } = params; // gets 'frontic' from /frontic
-
+  const [device,setDevice]=useState("laptop")
   const projectData = allProjects.find(p => p.slug === project);
 
 
@@ -35,7 +40,7 @@ export default function ProjectPage() {
   const iconclass = " text-[100px] w-full color"
   return (
     <>
-      <Navbar2/>
+      <Navbar2 />
       <div className=" pcontainer">
         <div className="flex justify-between hcolor items-center py-[15px]">
           <Link href="/" className="flex items-center gap-[5px] md:gap-[10px] color cursor-pointer opacity-80 hover:opacity-100 duration-300 hover:translate-x-[-5px] ">
@@ -60,7 +65,6 @@ export default function ProjectPage() {
         </div>
         <p className="para mb-1 mt-[10px]">{projectData.description}</p>
         <strong className="para  mt-[15px] flex gap-[15px] opacity-80"><span>Type : </span>  <span className="capitalize font-[600]">{projectData.type}</span></strong>
-        {projectData.theme && (<strong className="para   flex gap-[15px] opacity-80"><span>Theme : </span>  <span className="font-[600]">{projectData.theme}</span></strong>)}
         <strong className="para  mb-4  flex gap-[15px] opacity-80"><span>Tech Stack : </span>  <span className=" font-[600]">{projectData.tech_stack}</span></strong>
 
         <div className="flex flex-wrap">
@@ -81,7 +85,6 @@ export default function ProjectPage() {
             <p className="heading font-[700] color">Landing Page</p>
           </div>
 
-          <p className="para mt-[10px]">Each project in my portfolio represents a step forward in blending creativity with functionality. From crafting pixel-perfect designs to building seamless user experiences, I focus on developing fast, responsive, and user-friendly web applications. Explore the collection below to see how I turn ideas into fully realized digital solutions.</p>
           <Image
             src={projectData.landing_page_image}
             alt={`${projectData.name} landing`}
@@ -198,22 +201,42 @@ export default function ProjectPage() {
 
           <p className="para mt-[5px]">Fully responsive design optimized for mobile, tablet, and laptop devices to ensure a smooth user experience across all platforms.</p>
           <div className="flex flex-wrap  mt-[20px] items-center gap-[10px] ">
-            <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
-              {projectData.responsiveness.laptop == true ? <RxLaptop className={iconclass} /> : <TbDeviceLaptopOff className={iconclass} />}
-              <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.laptop == true ? "Laptop Responsive" : "Not Laptop Responsive"}</p>
-            </div>
-            <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
-              {projectData.responsiveness.tablet == true ? <SlScreenTablet className={iconclass} /> : <TbDeviceTabletOff className={iconclass} />}
-              <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.tablet == true ? "Tablet Responsive" : "Not Tablet Responsive"}</p>
+            <Dialog>
+              <DialogTrigger asChild  onClick={()=>setDevice("laptop")}>
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                  {projectData.responsiveness.laptop == true ? <RxLaptop className={iconclass} /> : <TbDeviceLaptopOff className={iconclass} />}
+                  <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.laptop == true ? "Laptop Responsive" : "Not Laptop Responsive"}</p>
+                </div>
+              </DialogTrigger>
 
-            </div>
-            <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
-              {projectData.responsiveness.mobile == true ? <TbDeviceMobile className={iconclass} /> : <TbDeviceMobileOff className={iconclass} />}
-              <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.mobile == true ? "Mobile Responsive" : "Not Mobile Responsive"}</p>
-            </div>
+              <DialogTrigger asChild  onClick={()=>setDevice("tablet")}>
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                  {projectData.responsiveness.tablet == true ? <SlScreenTablet className={iconclass} /> : <TbDeviceTabletOff className={iconclass} />}
+                  <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.tablet == true ? "Tablet Responsive" : "Not Tablet Responsive"}</p>
 
+                </div>
+              </DialogTrigger>
+
+              <DialogTrigger asChild  onClick={()=>setDevice("mobile")}>
+                <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 cursor-pointer">
+                  {projectData.responsiveness.mobile == true ? <TbDeviceMobile className={iconclass} /> : <TbDeviceMobileOff className={iconclass} />}
+                  <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.mobile == true ? "Mobile Responsive" : "Not Mobile Responsive"}</p>
+                </div>
+              </DialogTrigger>
+
+
+              <DialogTrigger asChild>
+
+              </DialogTrigger>
+              <DialogContent className="sm:min-w-[90%] md:min-w-[80%] lg:min-w-[80%] xl:min-w-[70%] 2xl:min-w-[60%] ">
+
+                <Image src={`/projects/${projectData.slug}/${device}.png`} className="w-full" width={1400} height={800} alt="device" unoptimized />
+              </DialogContent>
+
+            </Dialog>
           </div>
         </div>
+
 
 
 
@@ -230,7 +253,7 @@ export default function ProjectPage() {
         }
 
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
