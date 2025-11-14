@@ -47,7 +47,7 @@ export default function CoreWebServices() {
     <section className= "pad bg-white" id='services'>
       <div className="container  sm:text-center">
         <h2 className="heading font-bold color">
-          Core Web Development Services
+          Services We Offers
         </h2>
         <p className="mt-3 para text-gray-600 max-w-3xl mx-auto">
           As a leading website development company, we deliver end-to-end web
